@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوظائف الأكثر طلباً في السوق 2023</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3a0ca3;
+            --primary-light: #4a15cc;
+            --secondary: #4361ee;
+            --accent: #7209b7;
+            --tech: #4cc9f0;
+            --health: #2ec4b6;
+            --business: #ff9f1c;
+            --creative: #e71d36;
+            --light: #f8f9fa;
+            --dark: #1e1e2a;
+            --dark-light: #2d2d3a;
+            --gray: #6c757d;
+            --gray-light: #a0a4ab;
+            --border: #dee2e6;
+            --success: #28a745;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fb;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            font-size: 1.5rem;
+        }
+        
+        .logo i {
+            font-size: 1.8rem;
+            color: var(--tech);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover, nav a.active {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .header-cta {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .btn-primary {
+            background: var(--tech);
+            border: 2px solid var(--tech);
+            color: var(--dark);
+        }
+        
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--tech);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(58, 12, 163, 0.9), rgba(67, 97, 238, 0.9)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 25px;
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .hero-feature i {
+            color: var(--tech);
+            font-size: 1.5rem;
+        }
+        
+        /* Search Section */
+        .search-section {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: -40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 100;
+        }
+        
+        .search-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .search-input {
+            flex: 1;
+            min-width: 250px;
+            position: relative;
+        }
+        
+        .search-input input {
+            width: 100%;
+            padding: 15px 20px 15px 50px;
+            border: 2px solid var(--border);
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .search-input input:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+        
+        .search-input i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+        
+        .search-filters {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .filter-select {
+            padding: 15px 20px;
+            border: 2px solid var(--border);
+            border-radius: 50px;
+            appearance: none;
+            background: white url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236c757d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat left 15px center;
+            padding-left: 45px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .filter-select:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+        
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        @media (max-width: 992px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Jobs Section */
+        .jobs-section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .category-tab {
+            padding: 12px 25px;
+            background: white;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid transparent;
+        }
+        
+        .category-tab.active {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(58, 12, 163, 0.2);
+        }
+        
+        .category-tab[data-category="tech"]:hover {
+            border-color: var(--tech);
+        }
+        
+        .category-tab[data-category="health"]:hover {
+            border-color: var(--health);
+        }
+        
+        .category-tab[data-category="business"]:hover {
+            border-color: var(--business);
+        }
+        
+        .category-tab[data-category="creative"]:hover {
+            border-color: var(--creative);
+        }
+        
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .job-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .job-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .job-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        .job-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 10;
+        }
+        
+        .badge-hot {
+            background: var(--creative);
+            color: white;
+        }
+        
+        .badge-new {
+            background: var(--success);
+            color: white;
+        }
+        
+        .job-header {
+            padding: 25px;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        
+        .job-company {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .company-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            background: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .company-name {
+            font-weight: 600;
+            color: var(--gray);
+        }
+        
+        .job-category {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .category-tech {
+            background: #e6f7ff;
+            color: var(--tech);
+        }
+        
+        .category-health {
+            background: #e6fcf5;
+            color: var(--health);
+        }
+        
+        .category-business {
+            background: #fff7e6;
+            color: var(--business);
+        }
+        
+        .category-creative {
+            background: #ffe6e9;
+            color: var(--creative);
+        }
+        
+        .job-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+            transition: var(--transition);
+        }
+        
+        .job-card:hover .job-title {
+            color: var(--primary);
+        }
+        
+        .job-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .stat-tech { color: var(--tech); }
+        .stat-health { color: var(--health); }
+        .stat-business { color: var(--business); }
+        .stat-creative { color: var(--creative); }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+        
+        .job-body {
+            padding: 25px;
+        }
+        
+        .job-body h4 {
+            margin-bottom: 15px;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .job-body h4 i {
+            color: var(--primary);
+        }
+        
+        .skills-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .skills-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .skills-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .skill-percentage {
+            background: var(--light);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .job-footer {
+            padding: 20px 25px;
+            background: var(--light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .growth {
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .growth-positive {
+            color: var(--success);
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+        
+        .sidebar-widget {
+            margin-bottom: 30px;
+        }
+        
+        .sidebar-widget:last-child {
+            margin-bottom: 0;
+        }
+        
+        .sidebar-widget h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .sidebar-widget h3 i {
+            color: var(--accent);
+        }
+        
+        .trending-list {
+            list-style: none;
+        }
+        
+        .trending-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+        }
+        
+        .trending-list li:hover {
+            color: var(--primary);
+        }
+        
+        .trending-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .trending-list i {
+            color: var(--primary);
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: var(--light);
+            border-radius: 4px;
+            margin: 10px 0 15px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            width: 0;
+            transition: width 1.5s ease-in-out;
+        }
+        
+        /* Newsletter */
+        .newsletter {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            padding: 60px 0;
+            color: white;
+            text-align: center;
+            margin: 60px 0;
+            border-radius: 15px;
+        }
+        
+        .newsletter-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .newsletter h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter p {
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+        }
+        
+        .newsletter-input:focus {
+            outline: none;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--tech);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: #DDD;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-column a:hover {
+            color: var(--tech);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #AAA;
+            font-size: 0.9rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animated {
+            animation: fadeInUp 0.6s forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .header-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-features {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            
+            .search-container {
+                flex-direction: column;
+            }
+            
+            .search-filters {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .filter-select {
+                flex: 1;
+                min-width: 150px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .jobs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .category-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <span>وظائف المستقبل</span>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">الرئيسية</a></li>
+                    <li><a href="#">الوظائف</a></li>
+                    <li><a href="#">المقالات</a></li>
+                    <li><a href="#">الإحصائيات</a></li>
+                    <li><a href="#">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-cta">
+                <a href="#" class="btn btn-outline">تسجيل الدخول</a>
+                <a href="#" class="btn btn-primary">انضم الآن</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content animated">
+                <h1>اكتشف الوظائف الأكثر طلباً في سوق العمل 2023</h1>
+                <p>استعرض أحدث الإحصائيات والاتجاهات في سوق العمل، واعثر على المسار الوظيفي المناسب لمستقبلك</p>
+                
+                <div class="hero-buttons">
+                    <a href="#jobs" class="btn btn-primary">استعرض الوظائف</a>
+                    <a href="#trends" class="btn btn-outline">اكتشف الاتجاهات</a>
+                </div>
+                
+                <div class="hero-features">
+                    <div class="hero-feature animated delay-1">
+                        <i class="fas fa-check-circle"></i>
+                        <span>بيانات محدثة من مصادر موثوقة</span>
+                    </div>
+                    <div class="hero-feature animated delay-2">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>تحليل مفصل للمهارات المطلوبة</span>
+                    </div>
+                    <div class="hero-feature animated delay-3">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>مسارات تعلم مخصصة</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Search Section -->
+        <div class="search-section animated">
+            <div class="search-container">
+                <div class="search-input">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="ابحث عن وظيفة أو مهارة...">
+                </div>
+                
+                <div class="search-filters">
+                    <select class="filter-select">
+                        <option>جميع التخصصات</option>
+                        <option>التقنية</option>
+                        <option>الصحة</option>
+                        <option>الأعمال</option>
+                        <option>الإبداعية</option>
+                    </select>
+                    
+                    <select class="filter-select">
+                        <option>جميع المستويات</option>
+                        <option>مبتدئ</option>
+                        <option>متوسط</option>
+                        <option>متقدم</option>
+                    </select>
+                    
+                    <button class="btn btn-primary">بحث</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="content">
+                <!-- Jobs Section -->
+                <section class="jobs-section" id="jobs">
+                    <div class="section-title">
+                        <h2>الوظائف الأكثر طلباً</h2>
+                        <p>استكشف الوظائف الأكثر طلباً في السوق حالياً ونسب المهارات المطلوبة لكل منها</p>
+                    </div>
+                    
+                    <div class="category-tabs">
+                        <div class="category-tab active" data-category="all">الكل</div>
+                        <div class="category-tab" data-category="tech">التقنية</div>
+                        <div class="category-tab" data-category="health">الصحة</div>
+                        <div class="category-tab" data-category="business">الأعمال</div>
+                        <div class="category-tab" data-category="creative">الإبداعية</div>
+                    </div>
+                    
+                    <div class="jobs-grid">
+                        <!-- Job 1 -->
+                        <div class="job-card" data-category="tech">
+                            <div class="job-badge badge-hot">مطلوب بشدة</div>
+                            <div class="job-header">
+                                <div class="job-company">
+                                    <div class="company-logo">
+                                        <i class="fab fa-microsoft"></i>
+                                    </div>
+                                    <div class="company-name">شركة تقنية</div>
+                                </div>
+                                <span class="job-category category-tech">تقنية</span>
+                                <h3 class="job-title">مطور برمجيات</h3>
+                                <div class="job-stats">
+                                    <div class="stat">
+                                        <div class="stat-value stat-tech">97%</div>
+                                        <div class="stat-label">الطلب في السوق</div>
+                                    </div>
+                                    <div class="stat">
+                                        <div class="stat-value">$105,000</div>
+                                        <div class="stat-label">متوسط الراتب</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="job-body">
+                                <h4><i class="fas fa-tools"></i> المهارات المطلوبة:</h4>
+                                <ul class="skills-list">
+                                    <li>برمجة JavaScript/TypeScript <span class="skill-percentage">95%</span></li>
+                                    <li>أطر عمل (React, Angular, Vue) <span class="skill-percentage">90%</span></li>
+                                    <li>تطوير واجهات برمجة التطبيقات <span class="skill-percentage">88%</span></li>
+                                    <li>قواعد البيانات (SQL/NoSQL) <span class="skill-percentage">85%</span></li>
+                                    <li>أنظمة التحكم بالإصدار (Git) <span class="skill-percentage">92%</span></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="job-footer">
+                                <div class="growth growth-positive"><i class="fas fa-chart-line"></i> +15% نمو متوقع خلال 2024</div>
+                                <button class="btn btn-primary">تقديم الآن</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Job 2 -->
+                        <div class="job-card" data-category="tech">
+                            <div class="job-badge badge-new">جديد</div>
+                            <div class="job-header">
+                                <div class="job-company">
+                                    <div class="company-logo">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="company-name">أمن سيبراني</div>
+                                </div>
+                                <span class="job-category category-tech">تقنية</span>
+                                <h3 class="job-title">أخصائي أمن سيبراني</h3>
+                                <div class="job-stats">
+                                    <div class="stat">
+                                        <div class="stat-value stat-tech">94%</div>
+                                        <div class="stat-label">الطلب في السوق</div>
+                                    </div>
+                                    <div class="stat">
+                                        <div class="stat-value">$115,000</div>
+                                        <div class="stat-label">متوسط الراتب</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="job-body">
+                                <h4><i class="fas fa-tools"></i> المهارات المطلوبة:</h4>
+                                <ul class="skills-list">
+                                    <li>أمن الشبكات <span class="skill-percentage">92%</span></li>
+                                    <li>تحليل الثغرات الأمنية <span class="skill-percentage">90%</span></li>
+                                    <li>أمن السحابة الإلكترونية <span class="skill-percentage">88%</span></li>
+                                    <li>أمن تطبيقات الويب <span class="skill-percentage">85%</span></li>
+                                    <li>استجابة للحوادث <span class="skill-percentage">87%</span></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="job-footer">
+                                <div class="growth growth-positive"><i class="fas fa-chart-line"></i> +18% نمو متوقع خلال 2024</div>
+                                <button class="btn btn-primary">تقديم الآن</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Job 3 -->
+                        <div class="job-card" data-category="tech">
+                            <div class="job-badge badge-hot">مطلوب بشدة</div>
+                            <div class="job-header">
+                                <div class="job-company">
+                                    <div class="company-logo">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div class="company-name">ذكاء اصطناعي</div>
+                                </div>
+                                <span class="job-category category-tech">تقنية</span>
+                                <h3 class="job-title">متخصص ذكاء اصطناعي</h3>
+                                <div class="job-stats">
+                                    <div class="stat">
+                                        <div class="stat-value stat-tech">99%</div>
+                                        <div class="stat-label">الطلب في السوق</div>
+                                    </div>
+                                    <div class="stat">
+                                        <div class="stat-value">$125,000</div>
+                                        <div class="stat-label">متوسط الراتب</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="job-body">
+                                <h4><i class="fas fa-tools"></i> المهارات المطلوبة:</h4>
+                                <ul class="skills-list">
+                                    <li>تعلم الآلة <span class="skill-percentage">96%</span></li>
+                                    <li>معالجة اللغة الطبيعية <span class="skill-percentage">92%</span></li>
+                                    <li>إطار عمل TensorFlow/PyTorch <span class="skill-percentage">90%</span></li>
+                                    <li>برمجة Python <span class="skill-percentage">95%</span></li>
+                                    <li>تحليل البيانات <span class="skill-percentage">88%</span></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="job-footer">
+                                <div class="growth growth-positive"><i class="fas fa-chart-line"></i> +22% نمو متوقع خلال 2024</div>
+                                <button class="btn btn-primary">تقديم الآن</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Job 4 -->
+                        <div class="job-card" data-category="health">
+                            <div class="job-header">
+                                <div class="job-company">
+                                    <div class="company-logo">
+                                        <i class="fas fa-hospital"></i>
+                                    </div>
+                                    <div class="company-name">مستشفى حديث</div>
+                                </div>
+                                <span class="job-category category-health">صحة</span>
+                                <h3 class="job-title">ممرض/ممرضة</h3>
+                                <div class="job-stats">
+                                    <div class="stat">
+                                        <div class="stat-value stat-health">91%</div>
+                                        <div class="stat-label">الطلب في السوق</div>
+                                    </div>
+                                    <div class="stat">
+                                        <div class="stat-value">$75,000</div>
+                                        <div class="stat-label">متوسط الراتب</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="job-body">
+                                <h4><i class="fas fa-tools"></i> المهارات المطلوبة:</h4>
+                                <ul class="skills-list">
+                                    <li>رعاية المرضى <span class="skill-percentage">94%</span></li>
+                                    <li>المهارات السريرية <span class="skill-percentage">90%</span></li>
+                                    <li>إدارة الأدوية <span class="skill-percentage">88%</span></li>
+                                    <li>التعاطف والرعاية <span class="skill-percentage">92%</span></li>
+                                    <li>التوثيق الطبي <span class="skill-percentage">85%</span></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="job-footer">
+                                <div class="growth growth-positive"><i class="fas fa-chart-line"></i> +12% نمو متوقع خلال 2024</div>
+                                <button class="btn btn-primary">تقديم الآن</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Job 5 -->
+                        <div class="job-card" data-category="business">
+                            <div class="job-header">
+                                <div class="job-company">
+                                    <div class="company-logo">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="company-name">شركة تحليلات</div>
+                                </div>
+                                <span class="job-category category-business">أعمال</span>
+                                <h3 class="job-title">محلل بيانات</h3>
+                                <div class="job-stats">
+                                    <div class="stat">
+                                        <div class="stat-value stat-business">93%</div>
+                                        <div class="stat-label">الطلب في السوق</div>
+                                    </div>
+                                    <div class="stat">
+                                        <div class="stat-value">$85,000</div>
+                                        <div class="stat-label">متوسط الراتب</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="job-body">
+                                <h4><i class="fas fa-tools"></i> المهارات المطلوبة:</h4>
+                                <ul class="skills-list">
+                                    <li>تحليل البيانات <span class="skill-percentage">94%</span></li>
+                                    <li>إحصاءات <span class="skill-percentage">88%</span></li>
+                                    <li>SQL <span class="skill-percentage">90%</span></li>
+                                    <li>أدوات التصور (Tableau, Power BI) <span class="skill-percentage">87%</span></li>
+                                    <li>Excel المتقدم <span class="skill-percentage">85%</span></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="job-footer">
+                                <div class="growth growth-positive"><i class="fas fa-chart-line"></i> +14% نمو متوقع خلال 2024</div>
+                                <button class="btn btn-primary">تقديم الآن</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Job 6 -->
+                        <div class="job-card" data-category="creative">
+                            <div class="job-header">
+                                <div class="job-company">
+                                    <div class="company-logo">
+                                        <i class="fas fa-paint-brush"></i>
+                                    </div>
+                                    <div class="company-name">استوديو تصميم</div>
+                                </div>
+                                <span class="job-category category-creative">إبداعية</span>
+                                <h3 class="job-title">مصمم تجربة المستخدم</h3>
+                                <div class="job-stats">
+                                    <div class="stat">
+                                        <div class="stat-value stat-creative">89%</div>
+                                        <div class="stat-label">الطلب في السوق</div>
+                                    </div>
+                                    <div class="stat">
+                                        <div class="stat-value">$95,000</div>
+                                        <div class="stat-label">متوسط الراتب</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="job-body">
+                                <h4><i class="fas fa-tools"></i> المهارات المطلوبة:</h4>
+                                <ul class="skills-list">
+                                    <li>تصميم واجهات المستخدم <span class="skill-percentage">92%</span></li>
+                                    <li>أدوات التصميم (Figma, Sketch) <span class="skill-percentage">90%</span></li>
+                                    <li>أبحاث المستخدم <span class="skill-percentage">85%</span></li>
+                                    <li>النماذج الأولية <span class="skill-percentage">88%</span></li>
+                                    <li>مبادئ التصميم <span class="skill-percentage">87%</span></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="job-footer">
+                                <div class="growth growth-positive"><i class="fas fa-chart-line"></i> +13% نمو متوقع خلال 2024</div>
+                                <button class="btn btn-primary">تقديم الآن</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-widget">
+                    <h3><i class="fas fa-fire"></i> أسرع المهن نمواً</h3>
+                    <ul class="trending-list">
+                        <li>
+                            <i class="fas fa-robot"></i>
+                            <span>متخصص الذكاء الاصطناعي</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-shield-alt"></i>
+                            <span>أخصائي الأمن السيبراني</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-laptop-medical"></i>
+                            <span>مطور برمجيات طبية</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-solar-panel"></i>
+                            <span>فني طاقة متجددة</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-dna"></i>
+                            <span>أخصائي علم الجينات</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-widget">
+                    <h3><i class="fas fa-chart-bar"></i> المهارات الأكثر طلباً</h3>
+                    <div>
+                        <p>برمجة Python <span>96%</span></p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="background: var(--tech);" data-width="96%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>الذكاء الاصطناعي <span>94%</span></p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="background: var(--tech);" data-width="94%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>تحليل البيانات <span>92%</span></p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="background: var(--business);" data-width="92%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>التسويق الرقمي <span>88%</span></p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="background: var(--business);" data-width="88%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>إدارة المشاريع <span>85%</span></p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="background: var(--business);" data-width="85%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sidebar-widget">
+                    <h3><i class="fas fa-lightbulb"></i> نصائح للتطوير المهني</h3>
+                    <ul class="trending-list">
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>التعلم المستمر</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-network-wired"></i>
+                            <span>بناء شبكة علاقات مهنية</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-certificate"></i>
+                            <span>الحصول على شهادات متخصصة</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-language"></i>
+                            <span>تعلم لغات أجنبية</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <div class="container">
+        <div class="newsletter" id="trends">
+            <div class="newsletter-content">
+                <h2>ابق على اطلاع بأحدث اتجاهات سوق العمل</h2>
+                <p>اشترك في نشرتنا الإخبارية لتلقي آخر التحديثات حول الوظائف الأكثر طلباً والمهارات المطلوبة في سوق العمل</p>
+                
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="بريدك الإلكتروني">
+                    <button type="submit" class="btn btn-primary">اشترك الآن</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>عن التقرير</h3>
+                    <p>هذا التقرير مبني على أحدث الدراسات من منصات مثل LinkedIn، Indeed، ومنظمة العمل الدولية لسنة 2023.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>مصادر البيانات</h3>
+                    <ul>
+                        <li><a href="#">LinkedIn Workforce Report</a></li>
+                        <li><a href="#">World Economic Forum</a></li>
+                        <li><a href="#">Bureau of Labor Statistics</a></li>
+                        <li><a href="#">Indeed Hiring Lab</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>روابط مفيدة</h3>
+                    <ul>
+                        <li><a href="#">أفضل منصات التعلم</a></li>
+                        <li><a href="#">نماذج سير ذاتية</a></li>
+                        <li><a href="#">نصائح مقابلات العمل</a></li>
+                        <li><a href="#">مسارات تعلم المهارات</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>اتصل بنا</h3>
+                    <p>info@futurejobs.com</p>
+                    <p>+966 12 345 6789</p>
+                    
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2023 تقرير سوق العمل. جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Category filtering functionality
+            const categoryTabs = document.querySelectorAll('.category-tab');
+            const jobCards = document.querySelectorAll('.job-card');
+            
+            categoryTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    categoryTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Show/hide job cards based on category
+                    jobCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Animate elements on scroll
+            function animateOnScroll() {
+                const elements = document.querySelectorAll('.job-card, .progress-fill');
+                
+                elements.forEach(element => {
+                    const position = element.getBoundingClientRect();
+                    
+                    // If element is in viewport
+                    if(position.top < window.innerHeight && position.bottom >= 0) {
+                        if(element.classList.contains('job-card')) {
+                            element.classList.add('visible');
+                        } 
+                        
+                        if(element.classList.contains('progress-fill')) {
+                            const width = element.getAttribute('data-width');
+                            element.style.width = width;
+                        }
+                    }
+                });
+            }
+            
+            // Run on load and scroll
+            window.addEventListener('load', animateOnScroll);
+            window.addEventListener('scroll', animateOnScroll);
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Newsletter form submission
+            const newsletterForm = document.querySelector('.newsletter-form');
+            if(newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const emailInput = this.querySelector('input[type="email"]');
+                    
+                    if(emailInput.value && isValidEmail(emailInput.value)) {
+                        alert('شكراً لك على الاشتراك! سيصلك آخر التحديثات على بريدك الإلكتروني.');
+                        emailInput.value = '';
+                    } else {
+                        alert('يرجى إدخال بريد إلكتروني صحيح.');
+                    }
+                });
+            }
+            
+            // Email validation function
+            function isValidEmail(email) {
+                const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return regex.test(email);
+            }
+        });
+    </script>
+</body>
+</html>
